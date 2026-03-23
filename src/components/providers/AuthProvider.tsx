@@ -71,7 +71,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     
     if (error) throw error
     
-    // Create profile in database
+    // Create profile in database from the data returned by signUp
+
+
     if (data.user) {
       await supabase
         .from('profiles')
